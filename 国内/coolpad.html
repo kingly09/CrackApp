@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>酷派儿童卫士</title>
+	<meta charset="utf-8">
+    <meta name="keywords" content="阿巴町 企业签名 InHouse In-House iOS  ipa apk adhoc 安装 iPad iPhone">
+    <meta name="description" content="阿巴町iOS APP下载">
+
+    <meta property="og:type" content="webpage">
+    <meta property="og:url" content="http://www.abardeen.com/">
+    <meta property="og:title" content="阿巴町">
+    <meta property="og:description" content="阿巴町">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="阿巴町">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no minimal-ui">
+
+    <link rel="dns-prefetch" href="http://ssl.pgyer.com/">
+    <link rel="dns-prefetch" href="http://google-analytics.com/">
+
+  
+
+    <!-- CSS Global Compulsory-->
+    <link rel="stylesheet" href="./inc/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./inc/css/style.css">
+
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="./inc/css/line-icons.css">
+    <link rel="stylesheet" href="./inc/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./inc/css/flexslider.css">
+    <link rel="stylesheet" href="./inc/css/jquery.bxslider.css">
+    <link rel="stylesheet" href="./inc/css/horizontal-parallax.css">
+
+    <!-- CSS Theme -->
+    <link rel="stylesheet" href="./inc/css/default.css" id="style_color">
+
+    <!-- CSS Customization -->
+    <link rel="stylesheet" href="./inc/css/custom.css">
+
+</head>	
+
+<body>
+
+
+<!--=== Breadcrumbs ===-->
+<div class="row-fluid breadcrumbs margin-bottom-20">
+	<div class="container">
+        <h1 class="pull-left">酷派儿童卫士</h1>
+        <ul class="pull-right breadcrumb">
+            <li>版本：1.0.0 </li>
+			<li>2015-03-24</li>
+        </ul>
+    </div><!--/container-->
+</div><!--/breadcrumbs-->
+<!--=== End Breadcrumbs ===-->
+
+<!--=== Content Part ===-->
+<div class="container content"> 	
+    <div id="" class="view row">    
+        <div class="span12" style="text-align:center;">
+                        <a href="javascript:void(0);" onclick="javascript:install();"><img src="./app/coolpad/logo.png" class="appicon" onerror="javascript:this.src=&#39;/static/assets/img/default-icon.png&#39;;"></a>
+                        <div>
+            </div>
+        </div>
+    </div>
+
+    <div id="" class="view row" style="margin-top:30px;">    
+        <div class="span12 margin-bottom-20" style="text-align:center;">
+                        <a href="javascript:void(0);" onclick="javascript:install();" id="install" class="btn-u btn-u-lg"><i class="fa fa-download"></i> 点击安装</a>
+                    </div>
+        <div class="span12" style="text-align:center;">
+                            <span class="label label-info" id="labelInfo">适用于iOS设备</span>
+                      
+                    </div>
+    </div>
+
+    <hr class="devider devider-dotted">
+
+    <div id="" class="view row margin-bottom-30">    
+        <div class="span12" style="text-align:center;">
+            或者用手机扫描下面的二维码安装            <br>
+            <br>
+            <img src="./app/coolpad/qrcode.png">
+        </div>
+    </div>
+
+    
+    
+    
+        
+</div><!--/container-->	 	
+<!--=== End Content Part ===-->
+
+
+<!--=== Footer ===-->
+<div class="footer">
+	<div class="container">
+		<div class="row-fluid">
+		</div><!--/row-fluid-->	
+	</div><!--/container-->	
+</div><!--/footer-->	
+<!--=== End Footer ===-->
+
+
+
+<!-- JS Global Compulsory -->
+<script async="" src="./inc/analytics.js"></script><script type="text/javascript" src="./inc/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="./inc/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="./inc/bootstrap.min.js"></script>
+<script type="text/javascript" src="./inc/app.js"></script>
+
+<script>
+/*unction(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+ })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-52814215-1', 'auto');
+ga('send', 'pageview');*/
+</script>
+
+<!-- JS Page Level -->
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        App.init();
+    });
+</script>
+<!--[if lt IE 9]>
+<script src="/static/assets/plugins/respond.js"></script>
+<![endif]-->    
+
+<script>
+function isMobile() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+function install() {
+        if (!isMobile()) {
+        alert('请在手机上使用浏览器打开本页面，或者扫描下面的二维码，即可安装.');
+        return;
+    } 
+     url = "itms-services://?action=download-manifest&url=https://app-download-cn.abardeen.com/app/coolpad/kitMade.plist";
+    window.location.href = url;
+}
+function saveData() {
+    $.ajax({
+        type : "POST",
+        data : $('#form').serialize(),
+        dataType: 'json',
+        beforeSend: function( xhr ) {
+            $('#submitButton').text('请稍后...').addClass('btn-u-default').attr('disabled', 'disabled');
+        },
+        success : function(result, textStatus, jqXHR) {
+            code = result.code;
+            if (code == 0) {
+                window.location.href = '/app/view/4c2f49879f9f68a579352733b20bb296';
+            } else {
+                alert(result.message);
+                $('#submitButton').text('立即进入').removeClass('btn-u-default').removeAttr('disabled');
+            }
+        },
+        error : function(jqXHR, textStatus, errorThrown) {
+            $('#submitButton').text('立即进入').removeClass('btn-u-default').removeAttr('disabled');
+        }
+    });
+}
+function isMobileDateValid() {
+    var myDate = new Date();
+    var ts = myDate.getTime() / 1000;
+    return (ts <= 1411228799);
+}
+$(document).ready(function() {
+    $('#form').submit(function() {
+        if ($('#password').val() == '') {
+            alert('请输入密码');
+            return false;
+        }
+
+        saveData();
+        return false;
+    });
+
+    $('.history_row').click(function() {
+       appkey = $(this).attr('appkey');
+       window.location.href = '/app/view/' + appkey;
+    });
+
+    $('.history_show_more').click(function() {
+       $('.history_row').show();
+       $(this).hide();
+    });
+});
+</script>
+
+
+
+</body></html>
