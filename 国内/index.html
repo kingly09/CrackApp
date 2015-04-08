@@ -68,6 +68,10 @@
         <div class="span12 margin-bottom-20" style="text-align:center;">
                         <a href="javascript:void(0);" onclick="javascript:install();" id="install" class="btn-u btn-u-lg"><i class="fa fa-download"></i> 点击安装</a>
                     </div>
+        
+        <div class="span12 margin-bottom-20" style="text-align:center;">
+            <a href="javascript:void(0);"  id="appInstall"  onclick="javascript:appInstall();" class="btn-u btn-u-lg"><i class="fa fa-download"></i> <img src="./inc/appAtore.png" width="25" height="25"> app store</a>
+        </div>
         <div class="span12" style="text-align:center;">
                             <span class="label label-info" id="labelInfo">适用于iOS设备</span>
                       
@@ -152,6 +156,17 @@ function install() {
      url = "itms-services://?action=download-manifest&url=https://app-download-cn.abardeen.com/app/kitMade/kitMade.plist";
     window.location.href = url;
 }
+
+function appInstall(){
+    
+    if (!isMobile()) {
+        alert('请在手机上使用浏览器打开本页面，或者扫描下面的二维码，即可安装.');
+        return;
+    }
+    url = "https://itunes.apple.com/app/id941597589";
+    window.location.href = url;
+}
+
 function saveData() {
     $.ajax({
         type : "POST",
