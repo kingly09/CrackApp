@@ -68,6 +68,11 @@
         <div class="span12 margin-bottom-20" style="text-align:center;">
                         <a href="javascript:void(0);" onclick="javascript:install();" id="install" class="btn-u btn-u-lg"><i class="fa fa-download"></i> Install App</a>
                     </div>
+       <!-- <div class="span12 margin-bottom-20" style="text-align:center;">
+            <a href="javascript:void(0);"  id="appInstall"  onclick="javascript:appInstall();" class="btn-u btn-u-lg"><i class="fa fa-download"></i> <img src="./inc/appAtore.png" width="25" height="25"> app store</a>
+        </div>
+        -->
+        
         <div class="span12" style="text-align:center;">
                             <span class="label label-info" id="labelInfo">For iOS</span>
                       
@@ -146,7 +151,7 @@ function isMobile() {
     return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 }
 function install() {
-        if (!isMobile()) {
+    if (!isMobile()) {
         alert('For install app, please use the mobile-browser to open this page, or scan the QR code below.');
         return;
     }
@@ -156,6 +161,17 @@ function install() {
     url = "itms-services://?action=download-manifest&url=https://app-download-hk.abardeen.com/app/pomokids/kitMade.plist";
     window.location.href = url;
 }
+
+function appInstall(){
+
+    if (!isMobile()) {
+        alert('For install app, please use the mobile-browser to open this page, or scan the QR code below.');
+        return;
+    }
+    url = "https://itunes.apple.com/app/id965094096";
+    window.location.href = url;
+}
+
 function saveData() {
     $.ajax({
         type : "POST",
